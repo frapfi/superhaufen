@@ -1,0 +1,40 @@
+/* Media Queries */
+
+// Note: The best way to structure the use of media queries is to create the queries
+// near the relevant code. For example, if you wanted to change the styles for buttons
+// on small devices, paste the mobile query code up in the buttons section and style it
+// there.
+
+// Larger than mobile
+// default: min-width: 400px
+@media (#{$bp-larger-than-mobile}) {}
+
+// Larger than phablet (also point when grid becomes active)
+// default: min-width: 550px
+@media (#{$bp-larger-than-phablet}) {}
+
+// Larger than tablet
+// default: min-width: 750px
+@media (#{$bp-larger-than-tablet}) {}
+
+// Larger than desktop
+// default: min-width: 1000px
+@media (#{$bp-larger-than-desktop}) {}
+
+// Larger than Desktop HD
+// default: min-width: 1200px
+@media (#{$bp-larger-than-desktophd}) {}
+
+
+
+// https://responsivedesign.is/develop/browser-feature-support/media-queries-for-common-device-breakpoints
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+/* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen  and (min-width : 1824px) {
+/* Styles */
+}
+

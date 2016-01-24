@@ -1,0 +1,19 @@
+<!-- http://www.internetkultur.at/simple-hamburger-drop-down-menu-with-css-and-jquery/ -->
+<script>
+window.onload = function() {
+
+    $('#main-menu img').click(function(event) {
+
+        event.stopPropagation();
+        $('.sub-menu').toggleClass('expand');
+
+        $(document).click( function(){
+
+          if($('.sub-menu').hasClass('expand')) {
+            $('.sub-menu').removeClass('expand');
+          }
+        });
+
+    });
+};
+</script>

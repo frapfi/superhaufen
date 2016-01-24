@@ -1,0 +1,58 @@
+<!-- Capture and store a URL e.g. superhaufen-->
+{% capture url %}{{ page.url | split:'/' }}{% endcapture %} 
+
+<header id="header">
+    <div class="container">
+        <div class="row">
+            <div class="twelve columns">
+                <div id="header-email">
+                    <p>Mail heike@superhaufen.com</p>
+                </div>
+                <nav id="main-menu">
+                    <img src="{{ site.url }}/img/navigation/Menu.png" alt="Menu" />
+                    <ul class="sub-menu">
+
+                        {% for link in site.links %}
+                            <!-- Compare the page title to the URL -->
+                            {% assign current_page_title = link.name | downcase %}                           
+                            <li >
+                                <!-- If url part is equal to name of the link -->
+                                <a 
+                                {% if url == current_page_title %} 
+                                    class="nav_active" 
+                                {% elsif url contains "project" and link.name == "superhaufen" %}
+                                    class="nav_active_project"
+                                {% endif %} 
+                                href="{{ link.url }}">{{ link.name }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+                <!-- TODO logic mit elsif verbesseren -->
+                {% if page.url == "/minifien/" %}
+                <div id="header-logo-minifien">
+                    <img src="{{ site.url }}{{site.header-logo-minifien}}" alt="Header Logo" />
+                </div>
+                <div id="project-footer-email">
+                    <p>Shop Minifien @ DaWanda</p>
+                </div>
+                {% else %}
+                <div id="header-logo-superhaufen">
+                    <img src="{{ site.url }}{{site.header-logo}}" alt="Header Logo" />
+                </div>
+                {% endif %}
+                <!-- check if of type superhaufen and its subset of project pages -->
+                {% if page.url == "/superhaufen/" or page.category == "superhaufen" %}                               
+                <div id="fixed-sidebar-logo">
+                    <img src="{{ site.url }}{{site.sidebar-logo}}" alt="Header Logo" />
+                </div>
+                <div id="fixed-sidebar-text">
+                    <p>{{site.sidebar-text}}</p>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</header>
+
+

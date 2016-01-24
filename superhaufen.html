@@ -1,0 +1,27 @@
+---
+layout: page
+permalink: /superhaufen/
+title: Superhaufen Portfolio
+---
+
+{% for project in site.portfolio %}
+
+{% assign mod = forloop.index | modulo: 2 %}
+
+
+{% if mod != 0 %}
+    <div class="row">   
+{% endif %}
+
+
+<div class="one-half column ">
+    <a href="{{ project.url }}">
+     <img class="u-max-full-width" src="{{ project.img }}"  alt=" {{ project.description }}"/>
+    </a>
+</div>
+
+{% if mod  == 0 %}
+    </div>
+{% endif %}
+
+{% endfor %}

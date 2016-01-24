@@ -1,0 +1,22 @@
+/* Portfolio */
+
+.project-img {
+	position: relative; /* needed for z-index*/
+	display: block; 
+	margin-left: auto; 
+	margin-right: auto 
+}
+
+.project-txt {
+	text-align: center;
+	//max-width of picture
+	max-width: 753px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.project-heading {
+	text-transform: uppercase;
+	text-decoration: underline;
+
+}

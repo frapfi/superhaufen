@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+  		<!-- To be fixed, header must be outside of container 
+		cf. http://www.newmediacampaigns.com/blog/responsive-site-header
+		cf. http://codepen.io/JoelSutherland/pen/DzbfE
+  		-->
+	    {% include header.html %}
+
+	    <div class="content" >
+			<div class="container arrange-container-left">
+
+			    {{ content }}
+
+			    <!-- include logic for site / project specific footer -->
+			    {% if page.site-footer == true %}
+			    	{% include footer_site.html %}
+			    {% elsif page.category == "superhaufen" %}
+			    	{% include footer_superhaufen.html %}			    
+			    {% else %} <!-- minifien project -->
+			    	{% include footer_minifien.html%}
+			    {% endif %}
+
+			    {% include javascript.html %}
+
+	  		</div>
+  		</div> 
+
+  </body>
+
+</html>

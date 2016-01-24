@@ -1,0 +1,557 @@
+/* Layout ===================================
+=============================================
+============================================= */
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: $container-width;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* Overall content offset from fixed header */
+.content {
+   padding-top: 220px;
+}
+
+.column,
+.columns {
+    width: 100%;
+    float: left;
+    box-sizing: border-box;
+}
+
+/* Homepage  ---------------------------------
+----------------------------------------------
+----------------------------------------------*/
+
+#top-index-img, #bottom-index-img {
+    //position: relative;
+    display: block; 
+    margin: 5% auto;
+}
+
+#middle-index-img {
+    //position: relative; /* needed for z-index*/
+    display: block;
+    margin: 5% auto;
+    
+}
+
+.ini{
+    background-color: #fef3f0;
+}
+
+
+#index-footer-dots {
+        width: 155px;
+        height: 10px;
+        display: block; 
+        margin: 8% auto 8% auto;
+}
+
+#index-footer-heading {
+    font-size: 1em;
+    text-align: center;
+    margin-top: 1%;
+}
+
+
+
+/* Header with Navigation (mobile / general)------------
+and fixed sidebar elements ----------------------------------
+----------------------------------------------
+----------------------------------------------*/
+
+.sub-menu{
+  //display with jQuery click event
+  display: none;
+  margin-top: 30px;
+}
+
+.expand {
+  display: block /*!important*/;
+  /*Commented "!important" because of conflict with 
+  media query css "display: none"*/
+}
+
+// fixed header 
+#header {
+  z-index: 99;
+  position: fixed;
+  width: 100%;
+  height: 180px;
+  background: white;
+  padding-top: 20px;
+
+  #main-menu {
+    position: absolute;
+    text-transform: uppercase;
+    background-color: white;
+
+    img {
+        cursor: pointer;
+    }
+
+    li {
+      list-style: none;
+      margin-bottom: 10px;
+    }
+    a {
+      text-decoration: none;
+
+    }
+    a:visited {
+        color: black;
+    }
+    .nav_active {
+         //text-decoration: underline;
+         border-bottom: 2px solid;
+    }
+
+    .nav_active_project {
+        border-bottom: 2px solid;
+    }
+  }
+}
+
+#header-email {
+    display: none;
+}
+
+#header-logo-superhaufen,
+#header-logo-minifien {
+    position: absolute;
+    right: 0;
+    //for some reason the logo pops to the right boarder of
+    //view port when smaller tha 400px also element is contained within
+    //container class; so we have to "manually" adapt
+    //the padding according the original conatiner padding
+    //TODO: find out why this is happening
+    padding: 0 20px;
+    /* 
+    // If logo should be smaller on mobile devices
+    img {
+        width: 80%;
+        float: right;
+        //text-align:right;
+    } */
+  }
+
+//because header logo of minifien site is smaller
+//we have to put it further down
+#header-logo-minifien{
+    margin-top: 30px;
+}
+
+#fixed-sidebar-logo {
+display: none;
+}
+
+#fixed-sidebar-text {
+ display: none;
+}
+
+#project-footer-email {
+
+    //display: block;
+    //height: 20px;
+    width: 220px;
+    background-color: #fef3f0;
+    //position: absolute;
+    position: fixed;
+    right: 0px;
+    top: 345px;
+
+    p {
+        text-align: center;
+        margin: 5px;      
+    }
+}
+
+
+        
+
+/* Project page footer (mobile / general)------------
+and Sidebar ----------------------------------
+----------------------------------------------
+----------------------------------------------*/
+
+#project-footer-dots {
+    //position: relative;
+    display: block; 
+    margin: 5% auto 0 auto;  
+}
+
+#project-footer-backlink {
+    //position: relative;
+    display: block; 
+    margin: 5% auto 5px auto;  
+}
+.project-footer-txt {
+    text-align: center;
+    margin-top: 1%;
+}
+
+
+
+// For devices larger than 400px
+@media (#{$bp-larger-than-mobile}) {
+    .container {
+        width: $container-width-larger-than-mobile;
+        padding: 0;
+    }
+
+    // adaped / normalize padding again to the original state
+    // before adapted for viewport range below 400px
+    #header-logo-superhaufen,
+    #header-logo-minifien {padding: 0px;}
+
+}
+
+// For devices larger than 550px
+// CHANGED To larger than 650px
+@media (#{$bp-larger-than-phablet}) {
+    .container {
+        width: $container-width-larger-than-phablet;
+    }
+    .column,
+    .columns {
+        margin-left: $column-offset-horizontal;
+        /* frapfi */
+        margin-bottom: $column-offset-vertical;
+    }
+    .column:first-child,
+    .columns:first-child {
+        margin-left: 0;
+    }
+    .one.column,
+    .one.columns {
+        width: grid-column-width(1);
+    }
+    /* { width: 13.3333333333%; } */
+    .two.columns {
+        width: grid-column-width(2);
+    }
+    .three.columns {
+        width: grid-column-width(3);
+    }
+    .four.columns {
+        width: grid-column-width(4);
+    }
+    .five.columns {
+        width: grid-column-width(5);
+    }
+    .six.columns {
+        width: grid-column-width(6);
+    }
+    .seven.columns {
+        width: grid-column-width(7);
+    }
+    .eight.columns {
+        width: grid-column-width(8);
+    }
+    .nine.columns {
+        width: grid-column-width(9);
+    }
+    .ten.columns {
+        width: grid-column-width(10);
+    }
+    .eleven.columns {
+        width: grid-column-width(11);
+    }
+    .twelve.columns {
+        width: 100%;
+        margin-left: 0;
+    }
+    .one-third.column {
+        width: grid-column-width(4);
+    }
+    .two-thirds.column {
+        width: grid-column-width(8);
+    }
+    /* { width: 48%; } */
+    .one-half.column {
+        width: grid-column-width(6);
+    }
+    // Offsets
+    .offset-by-one.column,
+    .offset-by-one.columns {
+        margin-left: grid-offset-length(1);
+    }
+    .offset-by-two.column,
+    .offset-by-two.columns {
+        margin-left: grid-offset-length(2);
+    }
+    .offset-by-three.column,
+    .offset-by-three.columns {
+        margin-left: grid-offset-length(3);
+    }
+    .offset-by-four.column,
+    .offset-by-four.columns {
+        margin-left: grid-offset-length(4);
+    }
+    .offset-by-five.column,
+    .offset-by-five.columns {
+        margin-left: grid-offset-length(5);
+    }
+    .offset-by-six.column,
+    .offset-by-six.columns {
+        margin-left: grid-offset-length(6);
+    }
+    .offset-by-seven.column,
+    .offset-by-seven.columns {
+        margin-left: grid-offset-length(7);
+    }
+    .offset-by-eight.column,
+    .offset-by-eight.columns {
+        margin-left: grid-offset-length(8);
+    }
+    .offset-by-nine.column,
+    .offset-by-nine.columns {
+        margin-left: grid-offset-length(9);
+    }
+    .offset-by-ten.column,
+    .offset-by-ten.columns {
+        margin-left: grid-offset-length(10);
+    }
+    .offset-by-eleven.column,
+    .offset-by-eleven.columns {
+        margin-left: grid-offset-length(11);
+    }
+    .offset-by-one-third.column,
+    .offset-by-one-third.columns {
+        margin-left: grid-offset-length(4);
+    }
+    .offset-by-two-thirds.column,
+    .offset-by-two-thirds.columns {
+        margin-left: grid-offset-length(8);
+    }
+    .offset-by-one-half.column,
+    .offset-by-one-half.column {
+        margin-left: grid-offset-length(6);
+    }
+
+    @media (min-height: 800px) {
+
+
+    }
+
+    /* Header with Navigation (desktop) -----------
+    ----------------------------------------------
+    ----------------------------------------------*/
+    #main-menu {
+        width: 70%;
+        margin-top: 80px;
+        img {
+            display: none;
+        }
+        .sub-menu {
+            /* display submenu part again (mobile: display: none and toggeled via jQuery)
+            make it more specific because "display: none" is imported after _grid.scss */
+            display: inline-block;
+            // don't colide with logo on the right
+            width: 100%;
+            margin-bottom: 0;
+            margin-top: 0;
+
+            // .nav_active {
+            //     border-bottom: 2px solid;
+            // }
+
+            li {
+                //display: inline-block;
+                //width: auto;
+                float: left;
+                //margin-right: 2%;
+            }
+            li:after {
+              content: "/";
+              margin-left: 4px;
+              margin-right: 4px;  
+            }
+            li:last-child:after {
+              content: '';
+              margin: 0;
+            }
+
+            
+        }
+        
+    }
+
+    #header-email {
+        display: block;
+    }
+
+    #header-logo-superhaufen{
+        top:0;
+    }
+
+    #header-logo-minifien {
+        top:0;
+    }
+    
+}
+
+// Larger than desktop
+// default: min-width: 1000px
+@media (#{$bp-larger-than-desktop}) {
+    //Class currently set in default layout and header.html include
+    // .arrange-container-left {
+    //     margin-left: 5%;
+    // }
+    
+    // adaption of container width in order to 
+    // still show the header logo on the right with the offset
+    // otherwise it would be cut of for sceen sizes around 1028px
+    .container {
+        width: 70%;
+    }
+    
+
+    // sets header logo (width: 144px) outside of container area
+    #header-logo-superhaufen,
+    #header-logo-minifien{
+        position: absolute;
+        right: -145px;
+    }
+
+
+    // .container {
+    //     max-width: 1200px;
+    // }
+    
+
+    /* // fixed sidebar
+    #fixed-sidebar {
+      z-index: 99;
+      position: fixed;
+      width: 100%;
+      height: 180px;
+      background: white;
+      margin-top: 450px;
+      right: 0;
+
+      #fixed-sidebar-logo {
+        position: absolute;
+        right: 0;
+      }
+    } */
+
+
+    /* #fixed-sidebar-logo {
+        z-index: 99;
+        width: 200px;
+        background-color: white;
+        position:fixed;
+        left:960px;
+        top:350px;
+
+    } */
+
+    /* #fixed-sidebar-logo {
+        //disable "display: none" of mobile version
+        display: block;
+        padding: 10px;
+        background-color: white;
+        position: absolute;
+        //position: fixed;
+        right: 0px;
+        //top: 430px;
+        margin-bottom: 40%;
+        //bottom: 20%;
+    }
+
+    #fixed-sidebar-text {
+        //disable "display: none" of mobile version
+        display: block;
+        //height: 20px;
+        width: 220px;
+        background-color: white;
+        //position: absolute;
+        position: fixed;
+        right: 18px;
+        //top: 545px;
+        bottom: 15%;
+        
+       
+        p { 
+            text-align: center;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+    } */
+
+    #fixed-sidebar-logo {
+        //disable "display: none" of mobile version
+        display: block;
+        padding: 10px;
+        background-color: white;
+        // we don't want position: fixed here because
+        // image would hang on the right view port
+        // side by larger screens
+        position: absolute;
+        right: -80px;
+        top: 530px;
+    }
+
+    #fixed-sidebar-text {
+        //disable "display: none" of mobile version
+        display: block;
+        //height: 20px;
+        width: 220px;
+        background-color: white;
+        position: absolute;
+        right: -180px;
+        top: 645px;
+       
+        p { 
+            text-align: center;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+  }
+
+    #project-footer-email {
+
+        //display: block;
+        //height: 20px;
+        width: 220px;
+        background-color: #fef3f0;
+        position: absolute;
+        right: -145px;
+        top: 645px;
+
+        p {
+            text-align: center;
+            margin: 5px;      
+        }
+    }
+
+
+
+}
+
+// Larger than Desktop HD
+// default: min-width: 1200px
+// (same as Bootstrap)
+@media (#{$bp-larger-than-desktophd}) {
+
+ 
+}
+
+// Clearing
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+// Self Clearing Goodness
+.container:after,
+.row:after,
+.u-cf {
+    content: "";
+    display: table;
+    clear: both;
+}
