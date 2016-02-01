@@ -19,7 +19,7 @@ highlighter: pygments
 header-logo: /img/logos/Superhaufen_large.png
 header-logo-minifien: /img/logos/Minifien_large.png
 sidebar-logo: /img/logos/Minifien_small.png
-sidebar-text: Shop Minifien @ DaWanda
+# sidebar-text: Shop Minifien @ DaWanda
 
 # Pagination
 # paginate: 15
@@ -44,5 +44,7 @@ collections:
 
 # Styles ---------------
 heading-style: "{: .project-txt .project-heading}"
-text-style: "{: .project-txt}"
+text-style-superhaufen: "{: .project-txt}"
+text-style-minifien: "{: .project-txt-minfien}"
+heading-style: "{: .project-heading}"
 image-style: "{: .project-img .u-max-full-width}"

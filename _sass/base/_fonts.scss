@@ -1,1 +1,29 @@
+
+@import url(https://fonts.googleapis.com/css?family=Vollkorn);
+/* font-family: 'Vollkorn', serif; */
+
 /* http://www.webdesignerdepot.com/2013/01/how-to-use-any-font-you-like-with-css3/ */
+@font-face {
+  font-family: 'CooperHewitt-Book';
+  src: url('../fonts/CooperHewitt-Book.eot') format('eot'), /* IE9 Compat Modes */
+  	   url('../fonts/CooperHewitt-Book.woff') format('woff'), /* Pretty Modern Browsers */
+  	   url('../fonts/CooperHewitt-Book.otf') format('opentype');
+}
+/* font-family: 'CooperHewitt-Book', serif;*/
+
+@font-face {
+  font-family: 'CooperHewitt-Light';
+  src: url('../fonts/CooperHewitt-Light.eot') format('eot'), /* IE9 Compat Modes */
+  	   url('../fonts/CooperHewitt-Light.woff') format('woff'), /* Pretty Modern Browsers */
+  	   url('../fonts/CooperHewitt-Light.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'CooperHewitt-Medium';
+  src: url('../fonts/CooperHewitt-Medium.eot') format('eot'), /* IE9 Compat Modes */
+  	   url('../fonts/CooperHewitt-Medium.woff') format('woff'), /* Pretty Modern Browsers */
+  	   url('../fonts/CooperHewitt-Medium.otf') format('opentype');
+}
+
+
+
