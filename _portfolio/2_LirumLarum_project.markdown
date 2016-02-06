@@ -4,15 +4,6 @@ title: Project LirumLarum
 description: a project with a background image
 img: /img/Uebersicht_ganzgross2.jpg
 category: superhaufen
-project-img:
-
-  - url: /img/Portfolio_gross.jpg
-    alt: Cypripedium Calceolum
-    title: Cypripedium Calceolum
-
-  - url: /img/Portfolio_gross_hoch.jpg
-    alt: Hello bumblebee !
-    title: Hello bumblebee !
 ---
 
 ![My helpful screenshot]({{ site.url }}/img/Portfolio_gross.jpg){{site.image-style}}

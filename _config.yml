@@ -1,12 +1,11 @@
 # Site settings
 title: Superhaufen|Minifien
 email: superhaufen@superhaufen.com
-description: > # this means to ignore newlines until "baseurl:"
-  A simple, whitespace, helvetica based portfolio theme.
+description: Heike Pfisterer's portfolio page
 baseurl:  # the subpath of your site, e.g. /blog/
 url:  # the base hostname & protocol for your site
 
-# Build settings
+# Build settings  -----------------
 markdown: kramdown
 # JEKYLL_ENV=production jekyll build
 # eg  # {% if jekyll.environment == "production" %}
@@ -15,15 +14,10 @@ markdown: kramdown
 
 highlighter: pygments
 
-# Header and Sidebar section
+# Header and Sidebar section -----------------
 header-logo: /img/logos/Superhaufen_large.png
 header-logo-minifien: /img/logos/Minifien_large.png
 sidebar-logo: /img/logos/Minifien_small.png
-# sidebar-text: Shop Minifien @ DaWanda
-
-# Pagination
-# paginate: 15
-# paginate_path: "/blog/page:num/"
 
 links:
     - name: home
@@ -42,7 +36,7 @@ collections:
     output: true
     permalink: /portfolio/:path/
 
-# Styles ---------------
+# Styles in projekt / blog pages  -----------------
 heading-style: "{: .project-txt .project-heading}"
 text-style-superhaufen: "{: .project-txt}"
 text-style-minifien: "{: .project-txt-minfien}"

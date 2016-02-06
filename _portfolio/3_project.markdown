@@ -3,6 +3,7 @@ layout: project
 title: Project
 description: a project that redirects to another website
 img: /img/Uebersicht_ganzgross2.jpg
+category: superhaufen
 ---
 
 

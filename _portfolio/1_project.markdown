@@ -3,6 +3,7 @@ layout: project
 title: Project
 description: a project with a background image
 img: /img/Uebersicht_ganzgross2.jpg
+category: superhaufen
 ---
 
 ![My helpful screenshot]({{ site.url }}/img/Portfolio_gross.jpg){{site.image-style}}

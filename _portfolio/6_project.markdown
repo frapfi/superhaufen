@@ -3,6 +3,7 @@ layout: post
 title: Project
 description: a project with no image
 img: /img/Uebersicht_ganzgross2.jpg
+category: superhaufen
 ---
 
 ## Aestu illis Somnia

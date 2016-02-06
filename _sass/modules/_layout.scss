@@ -1,4 +1,4 @@
-/* Layout ===================================
+/* Layout and main styles ===================
 =============================================
 ============================================= */
 
@@ -22,6 +22,7 @@
     float: left;
     box-sizing: border-box;
 }
+
 
 /* Homepage  ---------------------------------
 ----------------------------------------------
@@ -56,13 +57,12 @@
     font-size: 1.2em;
     text-align: center;
     margin-top: 1%;
-    font-family: 'Vollkorn', serif;
+    font-family: $font-family-Volkorn;
 }
 
 
-
-/* Header with Navigation (mobile / general)------------
-and fixed sidebar elements ----------------------------------
+/* Header with Navigation (mobile / general)--
+and fixed sidebar elements -------------------
 ----------------------------------------------
 ----------------------------------------------*/
 
@@ -103,7 +103,7 @@ and fixed sidebar elements ----------------------------------
     }
     a {
       text-decoration: none;
-      font-family: 'CooperHewitt-Light';
+      font-family: $font-family-CooperHewitt-Light;
       font-size: 0.938em;
       letter-spacing: 0.1875em;
 
@@ -150,15 +150,11 @@ and fixed sidebar elements ----------------------------------
     margin-top: 30px;
 }
 
-#fixed-sidebar-logo {
-display: none;
+#fixed-sidebar-logo, #fixed-sidebar-text {
+    display: none;
 }
 
-#fixed-sidebar-text {
- display: none;
-}
-
-#project-footer-email {
+#fixed-project-email {
 
     //display: block;
     //height: 20px;
@@ -175,19 +171,17 @@ display: none;
         font-size: 0.875em;   
     }
 
-    .project-footer-email_first {
-        font-family: 'CooperHewitt-Light', serif;
+    .fixed-project-email_first {
+        font-family: $font-family-CooperHewitt-Light;
     }
 
-    .project-footer-email_second {
-        font-family: 'CooperHewitt-Medium', serif;
+    .fixed-project-email_second {
+        font-family: $font-family-CooperHewitt-Medium;
     }
 }
 
 
-        
-
-/* Project page footer (mobile / general)------------
+/* Project page footer (mobile / general)-----
 and Sidebar ----------------------------------
 ----------------------------------------------
 ----------------------------------------------*/
@@ -207,7 +201,7 @@ and Sidebar ----------------------------------
 .project-footer-txt {
     text-align: center;
     margin-top: 1%;
-    font-family: 'CooperHewitt-Book', serif;
+    font-family: $font-family-CooperHewitt-Book;
     font-size: 0.8125em;
     //letter-spacing: 1px;
 
@@ -351,12 +345,9 @@ and Sidebar ----------------------------------
         margin-left: grid-offset-length(6);
     }
 
-    @media (min-height: 800px) {
-
-
-    }
-
-    /* Header with Navigation (desktop) -----------
+    
+    /* Header with Navigation (mobile / general)--
+    and fixed sidebar elements -------------------
     ----------------------------------------------
     ----------------------------------------------*/
     #main-menu {
@@ -374,16 +365,11 @@ and Sidebar ----------------------------------
             margin-bottom: 0;
             margin-top: 0;
 
-            // .nav_active {
-            //     border-bottom: 2px solid;
-            // }
-
             li {
                 //display: inline-block;
                 //width: auto;
                 float: left;
-                //margin-right: 2%;
-                
+                //margin-right: 2%;              
             }
             li:after {
               content: "/";
@@ -393,44 +379,30 @@ and Sidebar ----------------------------------
             li:last-child:after {
               content: '';
               margin: 0;
-            }
-
-            
-        }
-        
-    }
+            }           
+        }//end .sub-menu     
+    } //end #main-menu
 
     #header-email {
+
         display: block;
 
         p { font-size: 0.9375em;}
 
-        .header-email-pt1 {
-            font-family: 'CooperHewitt-Light', serif;
-        }
+        .header-email-pt1 {font-family: $font-family-CooperHewitt-Light;}
 
-        .header-email-pt2 {
-            font-family: 'CooperHewitt-Medium', serif;
-        }
+        .header-email-pt2 {font-family: $font-family-CooperHewitt-Medium;}
     }
 
-    #header-logo-superhaufen{
-        top:0;
-    }
-
-    #header-logo-minifien {
+    #header-logo-superhaufen,  #header-logo-minifien{
         top:0;
     }
     
-}
+}// end @media (#{$bp-larger-than-phablet}) 
 
 // Larger than desktop
 // default: min-width: 1000px
 @media (#{$bp-larger-than-desktop}) {
-    //Class currently set in default layout and header.html include
-    // .arrange-container-left {
-    //     margin-left: 5%;
-    // }
     
     // adaption of container width in order to 
     // still show the header logo on the right with the offset
@@ -439,6 +411,10 @@ and Sidebar ----------------------------------
         width: 70%;
     }
 
+    /* Header with Navigation (mobile / general)--
+    and fixed sidebar elements -------------------
+    ----------------------------------------------
+    ----------------------------------------------*/
 
     #main-menu {
         //spread out width for larger font
@@ -454,73 +430,6 @@ and Sidebar ----------------------------------
         position: absolute;
         right: -145px;
     }
-
-
-    // .container {
-    //     max-width: 1200px;
-    // }
-    
-
-    /* // fixed sidebar
-    #fixed-sidebar {
-      z-index: 99;
-      position: fixed;
-      width: 100%;
-      height: 180px;
-      background: white;
-      margin-top: 450px;
-      right: 0;
-
-      #fixed-sidebar-logo {
-        position: absolute;
-        right: 0;
-      }
-    } */
-
-
-    /* #fixed-sidebar-logo {
-        z-index: 99;
-        width: 200px;
-        background-color: white;
-        position:fixed;
-        left:960px;
-        top:350px;
-
-    } */
-
-    /* #fixed-sidebar-logo {
-        //disable "display: none" of mobile version
-        display: block;
-        padding: 10px;
-        background-color: white;
-        position: absolute;
-        //position: fixed;
-        right: 0px;
-        //top: 430px;
-        margin-bottom: 40%;
-        //bottom: 20%;
-    }
-
-    #fixed-sidebar-text {
-        //disable "display: none" of mobile version
-        display: block;
-        //height: 20px;
-        width: 220px;
-        background-color: white;
-        //position: absolute;
-        position: fixed;
-        right: 18px;
-        //top: 545px;
-        bottom: 15%;
-        
-       
-        p { 
-            text-align: center;
-            margin-top: 5px;
-            margin-bottom: 5px;
-        }
-
-    } */
 
     #fixed-sidebar-logo {
         //disable "display: none" of mobile version
@@ -553,18 +462,23 @@ and Sidebar ----------------------------------
         }
 
         .fixed-sidebar-text-pt1{
-            font-family: 'CooperHewitt-Light', serif;
+            font-family: $font-family-CooperHewitt-Light;
             font-size: 0.875em;
         }
 
         .fixed-sidebar-text-pt2{
-            font-family: 'CooperHewitt-Medium', serif;
+            font-family: $font-family-CooperHewitt-Medium;
             font-size: 0.875em;
         }
 
-  }
+  }//end #fixed-sidebar-text
 
-    #project-footer-email {
+
+  /* Footer --------------------------------------
+    ----------------------------------------------
+    ----------------------------------------------*/
+
+    #fixed-project-email {
 
         //display: block;
         //height: 20px;
@@ -584,8 +498,7 @@ and Sidebar ----------------------------------
         font-size: 0.9375em;
     }
 
-
-}
+}// end @media (#{$bp-larger-than-desktop})
 
 // Larger than Desktop HD
 // default: min-width: 1200px
