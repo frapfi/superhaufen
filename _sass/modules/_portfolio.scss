@@ -4,7 +4,8 @@
 	position: relative; /* needed for z-index*/
 	display: block; 
 	margin-left: auto; 
-	margin-right: auto 
+	margin-right: auto; 
+	margin-bottom: 5%;
 }
 
 .project-txt-minfien, .project-txt {
@@ -17,6 +18,51 @@
 	font-family: $font-family-Volkorn;
 	font-size: 0.8125em;
 	line-height: 1.1875em;
+}
+
+.contact-txt-margin {
+	text-align: center;
+	//max-width of picture
+	max-width: 753px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 2px;
+	margin-bottom: 5%;
+
+	font-family: $font-family-Volkorn;
+	font-size: 1.25em;
+	line-height: 1.1875em;
+}
+
+.contact-txt-no-margin {
+	text-align: center;
+	//max-width of picture
+	max-width: 753px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 2px;
+	margin-top: 2px;
+
+	font-family: $font-family-Volkorn;
+	font-size: 1.25em;
+	line-height: 1.1875em;
+}
+
+.contact-heading {
+	text-align: center;
+	//max-width of picture
+	max-width: 753px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 1.375em;
+
+	font-family: $font-family-CooperHewitt-Medium;
+	letter-spacing: 0.3125em;
+	font-size: 1.25em;
+
+	text-transform: uppercase;
+	text-decoration: underline;
+
 }
 
 // .project-txt-minfien {

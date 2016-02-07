@@ -4,4 +4,4 @@ title: Impressum
 permalink: /impressum/
 ---
 
-IMPRESSUM superhaufen % Minifien
+Laber laber

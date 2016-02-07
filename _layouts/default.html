@@ -19,9 +19,11 @@
 			    {% if page.site-footer == true %}
 			    	{% include footer_site.html %}
 			    {% elsif page.category == "superhaufen" %}
-			    	{% include footer_superhaufen.html %}			    
+			    	{% include footer_superhaufen.html %}
+			    {% elsif page.category == "about" or page.category == "contact" %}
+			    	{% include footer_about_contact.html %}		    
 			    {% else %} <!-- minifien project -->
-			    	{% include footer_minifien.html%}
+			    	{% include footer_minifien.html %}
 			    {% endif %}
 
 			    {% include javascript.html %}
