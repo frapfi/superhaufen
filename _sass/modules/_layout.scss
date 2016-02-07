@@ -13,7 +13,8 @@
 
 /* Overall content offset from fixed header */
 .content {
-   padding-top: 220px;
+   //padding-top: 220px;
+   padding-top: 170px;
 }
 
 .column,
@@ -83,7 +84,8 @@ and fixed sidebar elements -------------------
   z-index: 99;
   position: fixed;
   width: 100%;
-  height: 180px;
+  //height: 180px;
+  height: 150px;
   background: white;
   padding-top: 20px; 
 }
@@ -135,13 +137,13 @@ and fixed sidebar elements -------------------
     //the padding according the original conatiner padding
     //TODO: find out why this is happening
     padding: 0 20px;
-    /* 
+    
     // If logo should be smaller on mobile devices
     img {
         width: 80%;
         float: right;
         //text-align:right;
-    } */
+    }
   }
 
 //because header logo of minifien site is smaller
@@ -350,6 +352,9 @@ and Sidebar ----------------------------------
     and fixed sidebar elements -------------------
     ----------------------------------------------
     ----------------------------------------------*/
+    #header { height: 180px; }
+
+
     #main-menu {
         width: 70%;
         margin-top: 80px;
@@ -372,9 +377,10 @@ and Sidebar ----------------------------------
                 //margin-right: 2%;              
             }
             li:after {
+              font-family: $font-family-CooperHewitt-Light;  
               content: "/";
-              margin-left: 4px;
-              margin-right: 4px;  
+              //margin-left: 4px;
+              margin-right: 6px; 
             }
             li:last-child:after {
               content: '';
@@ -396,7 +402,15 @@ and Sidebar ----------------------------------
 
     #header-logo-superhaufen,  #header-logo-minifien{
         top:0;
+
+        img {
+            width: 100%;
+            float: right;
+            //text-align:right;
+        }
     }
+
+    .content { padding-top: 220px; }
     
 }// end @media (#{$bp-larger-than-phablet}) 
 
@@ -418,7 +432,7 @@ and Sidebar ----------------------------------
 
     #main-menu {
         //spread out width for larger font
-        width: 75%;
+        width: 90%;
 
         a {font-size: 1.0625em;}
     }

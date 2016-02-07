@@ -15,8 +15,8 @@ markdown: kramdown
 highlighter: pygments
 
 # Header and Sidebar section -----------------
-header-logo: /img/logos/Superhaufen_large.png
-header-logo-minifien: /img/logos/Minifien_large.png
+header-logo: /img/logos/Superhaufen_Logo.png
+header-logo-minifien: /img/logos/Minifien_Logo.png
 sidebar-logo: /img/logos/Minifien_small.png
 
 links:
@@ -30,6 +30,8 @@ links:
       url: /about
     - name: contact
       url: /contact
+    - name: impressum
+      url: /impressum
 
 collections:
   portfolio:
