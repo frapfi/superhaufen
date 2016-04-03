@@ -41,7 +41,9 @@ collections:
 # Styles in projekt / blog pages  -----------------
 heading-style: "{: .project-txt .project-heading}"
 text-style-superhaufen: "{: .project-txt}"
+text-style-superhaufen-1st: "{: .project-txt-1st}"
 text-style-minifien: "{: .project-txt-minfien}"
+
 heading-style: "{: .project-heading }"
 heading-style-contact: "{: .contact-heading }"
 image-style: "{: .project-img .u-max-full-width}"

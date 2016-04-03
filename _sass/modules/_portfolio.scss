@@ -1,119 +1,99 @@
 /* Portfolio */
 
+
 .project-img {
-	position: relative; /* needed for z-index*/
-	display: block; 
-	margin-left: auto; 
-	margin-right: auto; 
-	margin-bottom: 5%;
+  position: relative; /* needed for z-index*/
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  //margin-bottom: 5%;
+}
+
+
+.project-txt-minfien-1st, .project-txt-1st {
+  text-align: center;
+  //max-width of picture
+  max-width: 600px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 35px;
+
+  font-family: $font-family-Volkorn;
+  font-size: 0.8125em;
+  line-height: 1.313em;
+
 }
 
 .project-txt-minfien, .project-txt {
-	text-align: center;
-	//max-width of picture
-	max-width: 753px;
-	margin-right: auto;
-	margin-left: auto;
+  text-align: center;
+  //max-width of picture
+  max-width: 600px;
+  margin-right: auto;
+  margin-left: auto;
 
-	font-family: $font-family-Volkorn;
-	font-size: 0.8125em;
-	line-height: 1.1875em;
+  font-family: $font-family-Volkorn;
+  font-size: 0.8125em;
+  line-height: 1.313em;
+
 }
 
 .contact-txt-margin {
-	text-align: center;
-	//max-width of picture
-	max-width: 753px;
-	margin-right: auto;
-	margin-left: auto;
-	margin-top: 2px;
-	margin-bottom: 5%;
+  text-align: center;
+  //max-width of picture
+  max-width: 753px;
+  margin: 2px auto 5% auto;
 
-	font-family: $font-family-Volkorn;
-	font-size: 1.25em;
-	line-height: 1.1875em;
+  font-family: $font-family-Volkorn;
+  font-size: 1.25em;
+  line-height: 1.1875em;
 }
 
 .contact-txt-no-margin {
-	text-align: center;
-	//max-width of picture
-	max-width: 753px;
-	margin-right: auto;
-	margin-left: auto;
-	margin-bottom: 2px;
-	margin-top: 2px;
+  text-align: center;
+  //max-width of picture
+  max-width: 600px;
+  //margin: 2px auto 2px auto;
+  margin: 2px auto 0 auto;
 
-	font-family: $font-family-Volkorn;
-	font-size: 1.25em;
-	line-height: 1.1875em;
+  font-family: $font-family-Volkorn;
+  font-size: 1.25em;
+  line-height: 1.1875em;
 }
 
 .contact-heading {
-	text-align: center;
-	//max-width of picture
-	max-width: 753px;
-	margin-right: auto;
-	margin-left: auto;
-	margin-bottom: 1.375em;
-
-	font-family: $font-family-CooperHewitt-Medium;
-	letter-spacing: 0.3125em;
-	font-size: 1.25em;
-
-	text-transform: uppercase;
-	text-decoration: underline;
-
-}
-
-// .project-txt-minfien {
-// 	text-align: center;
-// 	//max-width of picture
-// 	max-width: 753px;
-// 	margin-right: auto;
-// 	margin-left: auto;
-// }
-
-// .project-txt {
-// 	text-align: center;
-// 	//max-width of picture
-// 	max-width: 753px;
-// 	margin-right: auto;
-// 	margin-left: auto;
-
-// 	font-family: 'Vollkorn', serif;
-// 	font-size: 0.8125em;
-// 	line-height: 1.1875em;
-
-// }
-
-.project-heading {
-	text-align: center;
-	//max-width of picture
-	max-width: 753px;
-	margin-right: auto;
-	margin-left: auto;
-	margin-bottom: 1.375em;
-
-	font-family: $font-family-CooperHewitt-Medium;
-	letter-spacing: 0.3125em;
-	font-size: 0.8125em;
+  text-align: center;
+  //max-width of picture
+  max-width: 600px;
+  margin: 35px auto 1.375em auto;
+  font-family: $font-family-CooperHewitt-Medium;
+  letter-spacing: 0.3125em;
+  font-size: 1.25em;
+  text-transform: uppercase;
+  text-decoration: underline;
 
 }
 
 .project-heading {
-	text-transform: uppercase;
-	text-decoration: underline;
+  text-align: center;
+  //max-width of picture
+  max-width: 600px;
+  margin: 35px auto 1.375em auto;
+  font-family: $font-family-CooperHewitt-Medium;
+  letter-spacing: 0.250em;
+  font-size: 0.8125em;
+  text-transform: uppercase;
+  text-decoration: underline;
 
 }
 
 @media (#{$bp-larger-than-desktop}) {
 
-	.project-txt-minfien {
-		font-size: 1.25em;
-	}
+  .project-txt-minfien {
+    font-size: 1.25em;
+  }
 
-	.project-heading {
-		font-size: 1.25em;
-	}
-	
+  .project-heading {
+    font-size: 1.25em;
+  }
+
 }

@@ -116,11 +116,11 @@ and fixed sidebar elements -------------------
     }
     .nav_active {
          //text-decoration: underline;
-         border-bottom: 2px solid;
+         border-bottom: 1px solid;
     }
 
     .nav_active_project {
-        border-bottom: 2px solid;
+        border-bottom: 1px solid;
     }
   }
 
@@ -192,13 +192,13 @@ and Sidebar ----------------------------------
 #project-footer-dots {
     //position: relative;
     display: block; 
-    margin: 5% auto 0 auto;  
+    margin: 20px auto 20px auto;
 }
 
 #project-footer-backlink {
     //position: relative;
     display: block; 
-    margin: 5% auto 5px auto;  
+    margin: 20px auto 5px auto;
 }
 
 .project-footer-txt {
@@ -233,9 +233,9 @@ and Sidebar ----------------------------------
     }
     .column,
     .columns {
-        margin-left: $column-offset-horizontal;
+        margin-left: 4px;
         /* frapfi */
-        margin-bottom: $column-offset-vertical;
+        margin-bottom: 1px;
     }
     .column:first-child,
     .columns:first-child {

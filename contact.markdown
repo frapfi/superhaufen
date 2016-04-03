@@ -13,8 +13,4 @@ permalink: /contact/
 Heike Moll
 {{site.text-style-contact-no-margin}}
 Diplom Designerin
-{{site.text-style-contact-margin}}
-König-Karl Straße 35
-{{site.text-style-contact-no-margin}}
-70372
 {{site.text-style-contact-no-margin}}

@@ -14,7 +14,7 @@ category: superhaufen
 ![My helpful screenshot]({{ site.url }}/img/Portfolio_gross_hoch.jpg){{site.image-style}}
 
 Kategorie: Corporate Design
-{{site.text-style-superhaufen}}
+{{site.text-style-superhaufen-1st}}
 Kunde: Tfm
 {{site.text-style-superhaufen}}
 Agentur: S. Wolf, Loup
