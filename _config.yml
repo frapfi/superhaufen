@@ -15,7 +15,7 @@ markdown: kramdown
 highlighter: pygments
 
 # Header and Sidebar section -----------------
-header-logo: /img/logos/Superhaufen_Logo.png
+header-logo: /img/logos/Superhaufen_Logo_NEW.png
 header-logo-minifien: /img/logos/Minifien_Logo.png
 sidebar-logo: /img/logos/Minifien_small.png
 

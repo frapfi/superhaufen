@@ -1,19 +1,24 @@
 <!-- http://www.internetkultur.at/simple-hamburger-drop-down-menu-with-css-and-jquery/ -->
 <script>
-window.onload = function() {
+  window.onload = function () {
 
-    $('#main-menu img').click(function(event) {
+    $('#main-menu img').click(function (event) {
 
-        event.stopPropagation();
-        $('.sub-menu').toggleClass('expand');
+      event.stopPropagation();
+      $('.sub-menu').toggleClass('expand');
 
-        $(document).click( function(){
+      $(document).click(function () {
 
-          if($('.sub-menu').hasClass('expand')) {
-            $('.sub-menu').removeClass('expand');
-          }
-        });
+        if ($('.sub-menu').hasClass('expand')) {
+          $('.sub-menu').removeClass('expand');
+        }
+      });
 
     });
-};
+
+    //Because jekyll gnerates p tags around images when markdown is rendered in HTML
+    //we need to adjust style dynamically
+    $('.project-img').closest('p').css( {'margin-top' : '5px', 'margin-bottom' : '5px'});
+
+  };
 </script>

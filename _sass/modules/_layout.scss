@@ -9,6 +9,11 @@
     margin: 0 auto;
     padding: 0 20px;
     box-sizing: border-box;
+
+}
+
+#index-page {
+    margin-top: 100px;
 }
 
 /* Overall content offset from fixed header */
@@ -77,6 +82,7 @@ and fixed sidebar elements -------------------
   display: block /*!important*/;
   /*Commented "!important" because of conflict with 
   media query css "display: none"*/
+    width: 150px;
 }
 
 // fixed header 
@@ -87,7 +93,7 @@ and fixed sidebar elements -------------------
   //height: 180px;
   height: 150px;
   background: white;
-  padding-top: 20px; 
+  padding-top: 30px;
 }
 
 #main-menu {
@@ -128,7 +134,6 @@ and fixed sidebar elements -------------------
     display: none;
 }
 
-#header-logo-superhaufen,
 #header-logo-minifien {
     position: absolute;
     right: 0;
@@ -145,7 +150,25 @@ and fixed sidebar elements -------------------
         float: right;
         //text-align:right;
     }
-  }
+}
+
+#header-logo-superhaufen {
+    position: absolute;
+    right: 0;
+    //for some reason the logo pops to the right boarder of
+    //view port when smaller tha 400px also element is contained within
+    //container class; so we have to "manually" adapt
+    //the padding according the original conatiner padding
+    //TODO: find out why this is happening
+    padding: 0 20px;
+
+    // If logo should be smaller on mobile devices
+    img {
+        width: 40%;
+        float: right;
+        //text-align:right;
+    }
+}
 
 //because header logo of minifien site is smaller
 //we have to put it further down
@@ -235,7 +258,7 @@ and Sidebar ----------------------------------
     .columns {
         margin-left: 4px;
         /* frapfi */
-        margin-bottom: 1px;
+        //margin-bottom: 1px;
     }
     .column:first-child,
     .columns:first-child {
@@ -401,11 +424,21 @@ and Sidebar ----------------------------------
         .header-email-pt2 {font-family: $font-family-CooperHewitt-Medium;}
     }
 
-    #header-logo-superhaufen,  #header-logo-minifien{
+    #header-logo-minifien{
         top:0;
 
         img {
             width: 100%;
+            float: right;
+            //text-align:right;
+        }
+    }
+
+    #header-logo-superhaufen {
+        top:0;
+
+        img {
+            width: 50%;
             float: right;
             //text-align:right;
         }
