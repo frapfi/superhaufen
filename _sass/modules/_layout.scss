@@ -134,6 +134,8 @@ and fixed sidebar elements -------------------
     display: none;
 }
 
+
+//TODO: DRY up
 #header-logo-minifien {
     position: absolute;
     right: 0;
@@ -152,6 +154,7 @@ and fixed sidebar elements -------------------
     }
 }
 
+//TODO: DRY up
 #header-logo-superhaufen {
     position: absolute;
     right: 0;
@@ -212,6 +215,10 @@ and Sidebar ----------------------------------
 ----------------------------------------------
 ----------------------------------------------*/
 
+.extra-offset {
+    //margin-bottom: 50px;
+}
+
 #project-footer-dots {
     //position: relative;
     display: block; 
@@ -229,6 +236,7 @@ and Sidebar ----------------------------------
     margin-top: 1%;
     font-family: $font-family-CooperHewitt-Book;
     font-size: 0.8125em;
+    margin-bottom: 2px;
     //letter-spacing: 1px;
 
 }

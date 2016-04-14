@@ -44,7 +44,7 @@
   margin: 2px auto 5% auto;
 
   font-family: $font-family-Volkorn;
-  font-size: 1.25em;
+  font-size: 0.8125em;
   line-height: 1.1875em;
 }
 
@@ -56,24 +56,24 @@
   margin: 2px auto 0 auto;
 
   font-family: $font-family-Volkorn;
-  font-size: 1.25em;
+  font-size: 0.8125em;
   line-height: 1.1875em;
 }
 
-.contact-heading {
+/*.contact-heading {
   text-align: center;
   //max-width of picture
   max-width: 600px;
   margin: 35px auto 1.375em auto;
   font-family: $font-family-CooperHewitt-Medium;
   letter-spacing: 0.3125em;
-  font-size: 1.25em;
+  font-size: 0.8125em;
   text-transform: uppercase;
   text-decoration: underline;
 
-}
+}*/
 
-.project-heading {
+.project-heading, .contact-heading {
   text-align: center;
   //max-width of picture
   max-width: 600px;
@@ -93,6 +93,14 @@
   }
 
   .project-heading {
+    font-size: 1.25em;
+  }
+
+  .contact-heading {
+    font-size: 1.25em;
+  }
+
+  .contact-txt-margin, .contact-txt-no-margin  {
     font-size: 1.25em;
   }
 
