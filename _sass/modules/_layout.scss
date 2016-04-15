@@ -215,9 +215,10 @@ and Sidebar ----------------------------------
 ----------------------------------------------
 ----------------------------------------------*/
 
-.extra-offset {
-    //margin-bottom: 50px;
-}
+/*.extra-offset {
+    //margin-bottom: 270px;
+    margin-bottom: 540px;
+}*/
 
 #project-footer-dots {
     //position: relative;
@@ -554,6 +555,11 @@ and Sidebar ----------------------------------
     .project-footer-txt  {
         font-size: 0.9375em;
     }
+
+    /*.extra-offset {
+        margin-bottom: 255px;
+
+    }*/
 
 }// end @media (#{$bp-larger-than-desktop})
 
